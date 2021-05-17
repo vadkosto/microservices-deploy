@@ -24,7 +24,7 @@ pipeline {
           steps {
             checkout scm
             sh "chmod +x -R ${env.WORKSPACE}"
-            sh './mvnw1 compile'
+            sh './mvnw compile'
           }
         }
         stage('Test') {
