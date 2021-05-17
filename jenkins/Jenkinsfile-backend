@@ -10,13 +10,14 @@ pipeline {
   	IMAGE_NAME = "${env.IMAGE_BASE}:${env.IMAGE_TAG}"
   	IMAGE_NAME_LATEST = "${env.IMAGE_BASE}:latest"
   	DOCKERFILE_NAME = "Dockerfile-packaged"
+    JENKINS_HOME = "/var/lib/jenkins"
   }
   stages {
     stage("Prepare container") {
       agent {
         docker {
           image 'openjdk:11.0.5-slim'
-          args '-v $HOME/.m2:/root/.m2'
+          args '-v $JENKINS_HOME/.m2:/root/.m2'
         }
       }
       stages {
