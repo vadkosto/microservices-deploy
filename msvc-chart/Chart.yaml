@@ -8,7 +8,7 @@ sources:
   - https://github.com/vadkosto/microservices-gateway
   - https://github.com/vadkosto/microservices-deploy
 maintainers:
-  - name: Anton Shelenkov
-    email: anshelen@yandex.ru
-    url: https://shelenkov.herokuapp.com
+  - name: vadkosto
+    email: vadkosto@ukr.net
+    url: http://vad.dnsabr.com
 appVersion: 1.0.0

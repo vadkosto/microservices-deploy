@@ -5,7 +5,7 @@ pipeline {
     skipStagesAfterUnstable()
   }
   environment {
-    IMAGE_BASE = 'anshelen/microservices-backend'
+    IMAGE_BASE = 'vadkosto/microservices-backend'
   	IMAGE_NAME = "${env.IMAGE_BASE}:v$BUILD_NUMBER"
   	IMAGE_NAME_LATEST = "${env.IMAGE_BASE}:latest"
   }
