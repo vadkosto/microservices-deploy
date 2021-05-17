@@ -23,8 +23,10 @@ pipeline {
         stage('Build') {
           steps {
             checkout scm
-            sh "chmod +x -R ${env.WORKSPACE}"
-            sh './mvnw compile'
+            withMaven {
+              sh "chmod +x -R ${env.WORKSPACE}"
+              sh './mvnw compile'
+            }
           }
         }
         stage('Test') {
