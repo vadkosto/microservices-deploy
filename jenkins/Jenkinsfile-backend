@@ -68,7 +68,6 @@ pipeline {
       }
       steps {
         withKubeConfig([credentialsId: 'kubernetes-creds', serverUrl: "${CLUSTER_URL}", namespace: "${CLUSTER_NAMESPACE}"]) {
-          sh "helm repo add msvc-repo https://vadkosto.github.io/microservices-deploy/"
           sh "helm repo update"
           sh "helm upgrade ${HELM_PROJECT} ${HELM_CHART} --reuse-values --set backend.image.tag=${env.IMAGE_TAG}"
         }
