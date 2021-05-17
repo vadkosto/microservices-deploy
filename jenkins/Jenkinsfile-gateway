@@ -25,7 +25,7 @@ pipeline {
             checkout scm
             withMaven {
               sh "chmod +x -R ${env.WORKSPACE}"
-              sh './mvnw compile'
+              sh './mvnw clean compile'
             }
           }
         }
