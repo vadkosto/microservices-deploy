@@ -6,3 +6,6 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+/microservices-deploy.iml
+/modules.xml
+/vcs.xml
