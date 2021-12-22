@@ -1,0 +1,38 @@
+[
+{
+ "$type": "oci/site",
+ "$refId": "Site1",
+ "$action": "lookup",
+ "name": "Site1",
+ "status": "Live",
+ "type": "HUB"
+},
+{
+ "$type": "oci/site",
+ "$refId": "site11",
+ "$action": "lookup",
+ "name": "site11",
+ "status": "Live",
+ "type": "BTS"
+},
+{
+ "$type": "oci/yaschik",
+ "$refId": "yaschik1",
+ "name": "yaschik1",
+ "status": "Live",
+ "vendor": "DSC",
+ "type": "TYPE1",
+ "$parentSite": ["Site1"],
+ "$action": "create"
+},
+{
+ "$type": "oci/yaschik",
+ "$refId": "yaschik2",
+ "name": "yaschik1",
+ "status": "Ordered",
+ "vendor": "Cisco",
+ "type": "TYPE2",
+ "$parentSite": ["site11"],
+ "$action": "create"
+}
+]
